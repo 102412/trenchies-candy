@@ -1,41 +1,29 @@
 
 
-/* scroll reveal animation */
+/* HERO FADE */
 
-const revealElements = document.querySelectorAll(".scroll-left, .scroll-right");
+const hero = document.getElementById("heroText");
 
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{threshold:0.3});
-
-
-revealElements.forEach(el=>observer.observe(el));
-
-
-
-/* product motion */
-
-const bag = document.getElementById("bag");
-
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", ()=>{
 
 let scroll = window.scrollY;
 
-let rotate = scroll * 0.04;
+hero.style.opacity = 1 - scroll / 300;
 
-let float = Math.sin(scroll * 0.01) * 15;
+});
 
-bag.style.transform =
-`translateY(${float}px) rotateY(${rotate}deg)`;
+
+
+/* BAG DOWNWARD FLOAT */
+
+const bag = document.getElementById("bag");
+
+window.addEventListener("scroll", ()=>{
+
+let scroll = window.scrollY;
+
+let move = scroll * 0.1;
+
+bag.style.transform = `translateY(${move}px)`;
 
 });
