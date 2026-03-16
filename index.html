@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Trenchies Focus Candy</title>
+<title>Trenchies Energy Candy</title>
 
 <link rel="stylesheet" href="styles.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+
+<!-- BACKGROUND ELEMENTS -->
+
 <div class="grid-bg"></div>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+<div class="glow glow3"></div>
+
+
+
+<!-- NAV -->
 
 <header class="nav">
 
 <div class="logo">TRENCHIES</div>
 
 <nav>
+
 <a href="#focus">Focus</a>
 <a href="#energy">Energy</a>
-<a href="#ingredients">Ingredients</a>
+<a href="#science">Science</a>
+
+<a class="buy-btn" href="BUY_LINK">Buy Now</a>
+
 </nav>
 
 </header>
+
 
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-text scroll-left">
+<div class="hero-text" id="heroText">
+
 <h1>Energy + Focus Candy</h1>
 
 <p>
-Precision engineered nootropic candy delivering clean mental performance.
-50mg caffeine paired with amino acids and B-vitamins for sustained focus
-without the crash.
+Precision engineered nootropic candy delivering smooth cognitive energy.
+50mg caffeine combined with amino acids and B-vitamins to support focus,
+clarity, and reaction speed.
 </p>
 
 </div>
@@ -49,69 +66,75 @@ without the crash.
 </section>
 
 
-<!-- PRODUCT PINNED SECTION -->
 
-<section class="product-section">
+<!-- PRODUCT STORY SECTION -->
 
-<div class="product-container">
+<section class="story">
+
+<div class="product">
+
 <img src="images/trenchie.png" id="bag">
+
 </div>
 
-</section>
 
 
-<!-- INFO SECTIONS -->
+<div class="info">
 
-<section id="focus" class="info-section">
-
-<div class="text-block scroll-right">
+<div class="card" id="focus">
 
 <h2>Laser Focus</h2>
 
 <p>
-Each candy is designed to enhance concentration and reaction time using
-a balanced cognitive formula. L-Theanine moderates caffeine stimulation
-to deliver calm alertness instead of jittery energy.
+L-Theanine balances caffeine stimulation to produce calm alertness.
+This eliminates jitter and improves sustained attention.
 </p>
 
 </div>
 
-</section>
 
 
-<section id="energy" class="info-section">
-
-<div class="text-block scroll-left">
+<div class="card" id="energy">
 
 <h2>Clean Energy</h2>
 
 <p>
-Unlike traditional energy drinks, Trenchies deliver rapid mental
-stimulation without sugar spikes or heavy liquids. Portable, precise,
-and optimized for modern productivity.
+Each piece delivers rapid cognitive stimulation without sugar spikes
+or energy drink crashes. Pocket-sized performance fuel.
 </p>
 
 </div>
 
-</section>
 
 
+<div class="card" id="science">
 
-<section id="ingredients" class="info-section">
-
-<div class="text-block scroll-right">
-
-<h2>Ingredient Science</h2>
+<h2>Nootropic Science</h2>
 
 <p>
-The formula combines caffeine, L-Tyrosine, L-Theanine, and B12 to
-support neurotransmitter activity, focus endurance, and mental clarity.
-Every piece delivers fast acting cognitive stimulation.
+Caffeine, L-Tyrosine, L-Theanine, and Vitamin B12 work together
+to support neurotransmitter activity and mental endurance.
 </p>
 
 </div>
 
+
+
+<div class="card buy-card">
+
+<h2>Upgrade Your Focus</h2>
+
+<p>Portable cognitive performance.</p>
+
+<a class="big-buy" href="BUY_LINK">Buy Trenchies</a>
+
+</div>
+
+
+</div>
+
 </section>
+
 
 
 <footer>
@@ -119,7 +142,6 @@ Every piece delivers fast acting cognitive stimulation.
 <p>© 2026 Trenchies</p>
 
 </footer>
-
 
 <script src="script.js"></script>
 
