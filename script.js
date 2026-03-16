@@ -2,20 +2,35 @@
 
 /* HERO FADE */
 
-const hero=document.getElementById("heroText");
+const hero = document.getElementById("heroText");
 
 window.addEventListener("scroll",()=>{
 
-hero.style.opacity=1-window.scrollY/200;
+hero.style.opacity = 1 - window.scrollY/200;
 
 });
 
 
+
+/* BAG FLOAT */
+
+const bag = document.getElementById("bag");
+
+window.addEventListener("scroll",()=>{
+
+let float = Math.sin(window.scrollY * 0.01) * 10;
+
+bag.style.transform = `translateY(${float}px)`;
+
+});
+
+
+
 /* FEATURE REVEAL */
 
-const features=document.querySelectorAll(".feature");
+const features = document.querySelectorAll(".feature");
 
-const observer=new IntersectionObserver(entries=>{
+const observer = new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
@@ -27,22 +42,6 @@ entry.target.classList.add("show");
 
 });
 
-},{threshold:.4});
-
+},{threshold:0.3});
 
 features.forEach(f=>observer.observe(f));
-
-
-/* MOBILE MENU */
-
-const btn=document.getElementById("menuBtn");
-const dropdown=document.getElementById("dropdown");
-
-btn.onclick=()=>{
-
-dropdown.style.display=
-dropdown.style.display==="flex"
-? "none"
-: "flex";
-
-};
