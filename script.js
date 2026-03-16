@@ -2,65 +2,46 @@
 
 /* HERO FADE */
 
-const hero = document.getElementById("heroText");
+const hero=document.getElementById("heroText");
 
 window.addEventListener("scroll",()=>{
 
-let scroll = window.scrollY;
-
-hero.style.opacity = 1 - scroll/250;
+hero.style.opacity=1-window.scrollY/200;
 
 });
-
-
-
-/* BAG FLOAT */
-
-const bag = document.getElementById("bag");
-
-window.addEventListener("scroll",()=>{
-
-let scroll = window.scrollY;
-
-let float = Math.sin(scroll*0.01)*20;
-
-bag.style.transform=`translateY(${float}px)`;
-
-});
-
 
 
 /* FEATURE REVEAL */
 
 const features=document.querySelectorAll(".feature");
 
-window.addEventListener("scroll",()=>{
+const observer=new IntersectionObserver(entries=>{
 
-let scroll=window.scrollY;
+entries.forEach(entry=>{
 
-features.forEach((f,i)=>{
+if(entry.isIntersecting){
 
-if(scroll>400+(i*250)){
-
-f.classList.add("show");
+entry.target.classList.add("show");
 
 }
 
 });
 
-});
+},{threshold:.4});
 
+
+features.forEach(f=>observer.observe(f));
 
 
 /* MOBILE MENU */
 
 const btn=document.getElementById("menuBtn");
-const menu=document.getElementById("menu");
+const dropdown=document.getElementById("dropdown");
 
 btn.onclick=()=>{
 
-menu.style.display=
-menu.style.display==="flex"
+dropdown.style.display=
+dropdown.style.display==="flex"
 ? "none"
 : "flex";
 
